@@ -1,4 +1,4 @@
-package com.github.arocketman.config;
+package pucp.dp1.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -15,15 +15,8 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 
     @Override
     public void configure(HttpSecurity http) throws Exception {
-        http
-            .headers()
-                .frameOptions()
-                .disable()
-                .and()
-            .authorizeRequests()
-                .antMatchers("/","/home","/register","/login").permitAll()
-                .antMatchers("/private/**").authenticated();
+        http.authorizeRequests()
+        	.antMatchers("/").permitAll() //aqui pasan todos 
+        	.antMatchers("/private").authenticated(); //aqui solo lo ven los autorizados
     }
-
-
 }

@@ -1,14 +1,14 @@
-package com.github.arocketman.controllers;
+package pucp.dp1.controllers;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-
+//API demo
 @RestController
 public class HomeController {
 
     @GetMapping(value = "/")
-    public String index(){
+    public String home(){
         return "Hello world";
     }
 
