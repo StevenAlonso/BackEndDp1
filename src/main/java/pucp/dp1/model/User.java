@@ -31,6 +31,8 @@ public class User {
 	private String password;
 	@Column(name = "lastname")
 	private String lastname;
+	@Column(name = "name")
+	private String name;
 	@Column(name = "enabled")
 	private boolean enabled;
 
@@ -46,6 +48,7 @@ public class User {
 		this.username = user.username;
 		this.password = user.password;
 		this.lastname = user.lastname;
+		this.name = user.name;
 		this.enabled = user.enabled;
 		this.roles = user.roles;
 	}

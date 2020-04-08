@@ -1,4 +1,4 @@
-package pucp.dp1.interfaces;
+package pucp.dp1.dao;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

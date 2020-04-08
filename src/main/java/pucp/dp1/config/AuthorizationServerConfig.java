@@ -11,7 +11,7 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerEndpointsConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerSecurityConfigurer;
 
-import pucp.dp1.services.CustomUserDetailsService;
+import pucp.dp1.services.impl.CustomUserDetailsService;
 
 /**
  * Configures the authorization server.

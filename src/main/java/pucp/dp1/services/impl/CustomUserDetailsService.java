@@ -1,4 +1,4 @@
-package pucp.dp1.services;
+package pucp.dp1.services.impl;
 
 import java.util.List;
 import java.util.Optional;
@@ -13,7 +13,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import pucp.dp1.interfaces.IUser;
+import pucp.dp1.dao.IUser;
 import pucp.dp1.model.CustomUserDetails;
 import pucp.dp1.model.User;
 
@@ -34,7 +34,7 @@ public class CustomUserDetailsService implements UserDetailsService{
 		
 		List<GrantedAuthority> authorities = usuario.getRoles()
 				.stream()
-				.map(role -> new SimpleGrantedAuthority("ROLE_" + role.getName()))
+				.map(role -> new SimpleGrantedAuthority("ROLE_" + role.getDescription()))
 				.collect(Collectors.toList());
 		
 		return new org.springframework.security.core.userdetails.User(usuario.getUsername(), usuario.getPassword(), usuario.getEnabled(), true,true, true, authorities);

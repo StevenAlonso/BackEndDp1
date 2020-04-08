@@ -15,8 +15,8 @@ public class Role {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="role_id")
 	private int id;
-	@Column(name="role_name")
-	private String name;
+	@Column(name="description")
+	private String description;
 	
 	public Role() {
 		// TODO Auto-generated constructor stub
@@ -30,14 +30,13 @@ public class Role {
 		this.id = id;
 	}
 
-	public String getName() {
-		return name;
+	public String getDescription() {
+		return description;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setDescription(String description) {
+		this.description = description;
 	}
-	
-	
 
+	
 }
