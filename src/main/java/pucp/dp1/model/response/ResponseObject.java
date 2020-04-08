@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
 public class ResponseObject {
+	
 	private Estado estado;
 	@JsonInclude(Include.NON_NULL)
 	private Paginacion paginacion;

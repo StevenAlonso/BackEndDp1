@@ -3,12 +3,14 @@ package pucp.dp1.model.response;
 public class Error {
 
 	private Integer codigo;
-	private Nivel nivel;
 	private String mensaje;
 	private String mensajeInterno;
 	
 	public Error(Integer codigo, String mensaje, String mensajeInterno) {
-		// TODO Auto-generated constructor stub
+		super();
+		this.codigo = codigo;
+		this.mensaje = mensaje;
+		this.mensajeInterno = mensajeInterno;
 	}
 
 	public Integer getCodigo() {
@@ -17,14 +19,6 @@ public class Error {
 
 	public void setCodigo(Integer codigo) {
 		this.codigo = codigo;
-	}
-
-	public Nivel getNivel() {
-		return nivel;
-	}
-
-	public void setNivel(Nivel nivel) {
-		this.nivel = nivel;
 	}
 
 	public String getMensaje() {

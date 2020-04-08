@@ -5,4 +5,6 @@ import pucp.dp1.model.User;
 public interface IUsuarioService {
 	
 	public User findByUsername(String username);
+	
+	public User save(User user);
 }
